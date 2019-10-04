@@ -12,59 +12,54 @@ public class Bfs {
         this.node = node;
     }
 
-
-    public void setMap(String[][] map) {
-        this.map = map;
-    }
-
-    public void setNode(Node node) {
-        this.node = node;
-    }
-
     public void solveBFS() {
-        // αρχικοπιήση της ουράς
+        //Initialize the queue
         LinkedList<Node> queue = new LinkedList<>();
 
-        // Βάζουμε το σημείο αρχής στην ουρά
+        //Put the fist node in the queue
         queue.add(node);
 
-        // Μεταβλητές για το τρέχων σημείο και για το επόμενο
+        //Variable for the current node and next node
         Node current;
         Node next;
 
+        //Until queue has elements
         while (!queue.isEmpty()) {
+            System.out.print("Queue: ");
             printQueue(queue);
 
-            // Παίρνουμε το πρώτο στοιχείο απο την ουρά
+            //Take the first element of queue
             current = queue.removeFirst();
 
+            //The loop stops when we will arrive in End point
             if (node.isFinal(map, current)) {
                 break;
             }
 
+            //Mark as Visited current node we have visited
             node.markedasVisited(map, current);
 
-            // Κινηση πράκτορα προς τα πάνω
+            //Move of agent Up
             next = current.movesUp();
 
-            // Έλεγχος αν ειναι μέσα στα όρια και αν δεν το εχει επισκευτει ο πράκτορας
+            //Check if agent is in Maze limits and he is no visite a wall or an already visited node
             if (node.isInMaze(map, next) && node.isCleared(map, next)) {
                 queue.add(next);
             }
 
-            // Κινηση πράκτορα προς τα δεξιά
+            //Move of agent Right
             next = current.movesRight();
             if (node.isInMaze(map, next) && node.isCleared(map, next)) {
                 queue.add(next);
             }
 
-            // Κινηση πράκτορα προς τα κάτω
+            //Move of agent Down
             next = current.movesDown();
             if (node.isInMaze(map, next) && node.isCleared(map, next)) {
                 queue.add(next);
             }
 
-            // Κινηση πράκτορα προς τα αριστερά
+            //Move of agent Left
             next = current.movesLeft();
             if (node.isInMaze(map, next) && node.isCleared(map, next)) {
                 queue.add(next);
@@ -72,9 +67,12 @@ public class Bfs {
         }
     }
 
+    //Print Queue
     public void printQueue(LinkedList<Node>  linkedList) {
         for (Node node : linkedList) {
-            System.out.println(node.x() +  "  " + node.y()+ " ");
+            System.out.print("[" + node.x() +  "," + node.y()+ "}");
         }
+        System.out.println();
     }
+
 }

@@ -46,17 +46,12 @@ public class Node implements Move, CheckNode{
         maze[pos.x()][pos.y()] = "V";
     }
 
-    //If node is visited-V or node has wall-X
+    //If node is visited-V or node is wall-X then we don't want to move in this node
     public boolean isCleared(String[][] maze, Node pos) {
         return !(maze[pos.x()][pos.y()].equals("V")) && !(maze[pos.x()][pos.y()].equals("X"));
     }
 
-    /**
-     * Έλεγχος αν το σημείο που ελέγχεται βρίσκεται μεσα στα όρια του πίνακα
-     *
-     * @param - αντικείμενο Agent_Moves
-     * @return: true - ειναι μεσα στα όρια, false- εκτος ορίων
-     */
+    //Check if node is in maze
     public boolean isInMaze(String[][] maze, Node pos) {
         return  pos.x() >= 0 &&
                 pos.x() < maze.length &&
@@ -64,11 +59,7 @@ public class Node implements Move, CheckNode{
                 pos.y() < maze[0].length;
     }
 
-    /**
-     * Έλεγχος αν ειναι το σημείο του τερματισμού
-     *
-     * @return: true - ειναι το σημείο τρερματισμου, false - δεν ειναι το σημείο τρερματισμου
-     */
+    //Check if the node is the End node of maze so as the moves stop
     public boolean isFinal(String[][] maze, Node pos) {
         return maze[pos.x()][pos.y()].equals("E");
     }

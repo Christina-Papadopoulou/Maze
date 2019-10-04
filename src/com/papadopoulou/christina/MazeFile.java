@@ -25,20 +25,14 @@ public class MazeFile {
         return startPointY;
     }
 
-    public int getEndPointX() {
-        return endPointX;
-    }
-
-    public int getEndPointY() {
-        return endPointY;
-    }
-
     public String[][] readFile() {
         String[][] maze = {{""}};
         BufferedReader br;
 
         try {
+            //Instantiate file
             File file = new File(FILENAME);
+            //Instantiate BufferedReader
             br = new BufferedReader(new FileReader(file));
 
             String line;
@@ -48,19 +42,24 @@ public class MazeFile {
                 line = br.readLine();
                 String[] parametersSplit = line.split(" ");
 
+                //First line of lavirinthos.txt we read row and columns
                 if (i == 0) {
                     int rows = Integer.parseInt(parametersSplit[0]);
                     int columns = Integer.parseInt(parametersSplit[1]);
                     maze = new String[rows][columns];
+
+                //Second line of lavirinthos.txt we read the StartPoint of maze
                 } else if (i == 1) {
                     startPointX = Integer.parseInt(parametersSplit[0]);
                     startPointY = Integer.parseInt(parametersSplit[1]);
+                //Third line of lavirinthos.txt we read the Endpoin of maze
                 } else {
                     endPointX = Integer.parseInt(parametersSplit[0]);
                     endPointY = Integer.parseInt(parametersSplit[1]);
                 }
             }
 
+            //From the fourth line and after we read the maze
             while ((line = br.readLine()) != null) {
                 String[] array = line.split(" ");
 
@@ -70,7 +69,8 @@ public class MazeFile {
                 numLine++;
             }
         } catch (Exception ex) {
-            System.out.println("Put the file labirithos.txt in folder MyMaze");
+            //If the file did not found the alert user to put txt archive in the appropriate folder
+            System.out.println("Put the file labirithos.txt in folder Maze");
         }
         return maze;
     }

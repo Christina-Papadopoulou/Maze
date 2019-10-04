@@ -1,28 +1,19 @@
 package com.papadopoulou.christina;
 
 public class Maze {
-    // Αρχικοποίηση Μεταβλητων
     private String[][] maze;
 
-    /**
-     * Constructor
-     * @param maze
-     */
+    //Constructor of Maze
     Maze(String[][] maze){
         this.maze = maze;
     }
 
-    /**
-     *
-     * @return - Επιστρέφει το μέγεθος του maze
-     */
+    //Return size of maze
     private int mazeSize() {
         return maze.length;
     }
 
-    /**
-     * Εκτυπώνει τον maze
-     */
+    //Print maze with visited cells
     public void print(){
         System.out.println("The maze with the visited cells");
         for (int i = 0; i < mazeSize(); i++) {
