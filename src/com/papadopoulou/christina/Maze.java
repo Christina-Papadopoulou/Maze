@@ -4,12 +4,6 @@ public class Maze {
     // Αρχικοποίηση Μεταβλητων
     private String[][] maze;
 
-    // Σταθερές που υποδυκνύουν τα σηαμεία αρχής και τερματισμού
-    public static final int START_X = 3;
-    public static final int START_Y = 1;
-    public static final int END_X   = 3;
-    public static final int END_Y   = 4;
-
     /**
      * Constructor
      * @param maze
