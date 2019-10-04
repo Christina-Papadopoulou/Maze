@@ -12,16 +12,9 @@ public class Bfs {
         this.node = node;
     }
 
-    public String[][] getMap() {
-        return map;
-    }
 
     public void setMap(String[][] map) {
         this.map = map;
-    }
-
-    public Node getNode() {
-        return node;
     }
 
     public void setNode(Node node) {
@@ -49,7 +42,7 @@ public class Bfs {
                 break;
             }
 
-            node.markPos(map, current);
+            node.markedasVisited(map, current);
 
             // Κινηση πράκτορα προς τα πάνω
             next = current.movesUp();

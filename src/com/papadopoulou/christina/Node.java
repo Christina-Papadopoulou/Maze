@@ -1,24 +1,26 @@
 package com.papadopoulou.christina;
 
-public class Node implements Move{
+public class Node implements Move, CheckNode{
     private int x, y;
 
-    /*** Constructor @param x coordinate @param y coordinate*/
+    //Constructor Node with coordinates x,y
     public Node(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
-    /*** @return - Επιστρέφει την συντεταγμένη x του πράκτορα*/
+    //Get coordinate x
     public int x() {
         return x;
     }
 
-    /*** @return - Επιστρέφει την συντεταγμένη y του πράκτορα*/
+    //Get coordinate y
     public int y() {
         return y;
     }
 
+    //Override methods of interface Move
+    //First parameter x is for the columns and second for the lines
     @Override
     public Node movesUp() {
         return new Node(y - 1, x);
@@ -39,22 +41,14 @@ public class Node implements Move{
         return new Node(y, x - 1);
     }
 
-    /**
-     * Σημειώνει το μονοπάτι πο επισκέφθηκε ο πράκτορας με το σύμβολο V
-     *
-     */
-    public void markPos(String[][] maze, Node pos) {
+    //Notate the node of the maze as visited with V
+    public void markedasVisited(String[][] maze, Node pos) {
         maze[pos.x()][pos.y()] = "V";
     }
 
-    /**
-     * Έλεγχος μονοπατιού: Αν ο πράκτορας δεν το εχει επισκεφθεί και δεν ειναι
-     * τοίχος
-     *
-     * @return: true - ειναι καθαρό, false - δεν ειναι καθαρό
-     */
+    //If node is visited-V or node has wall-X
     public boolean isCleared(String[][] maze, Node pos) {
-        return !(maze[pos.x()][pos.y()].equals("V")) && !(maze[pos.x()][pos.y()].equals("x"));
+        return !(maze[pos.x()][pos.y()].equals("V")) && !(maze[pos.x()][pos.y()].equals("X"));
     }
 
     /**

@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5d3b62ec-df26-41ef-817f-acf804ad4320" name="Default Changelist" comment="" />
+    <list default="true" id="5d3b62ec-df26-41ef-817f-acf804ad4320" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/papadopoulou/christina/CheckNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labirinthos.txt" beforeDir="false" afterPath="$PROJECT_DIR$/labirinthos.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Maze/com/papadopoulou/christina/Bfs.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Maze/com/papadopoulou/christina/Bfs.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Maze/com/papadopoulou/christina/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Maze/com/papadopoulou/christina/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Maze/com/papadopoulou/christina/Maze.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Maze/com/papadopoulou/christina/Maze.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Maze/com/papadopoulou/christina/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Maze/com/papadopoulou/christina/Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/papadopoulou/christina/Bfs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/papadopoulou/christina/Bfs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/papadopoulou/christina/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/papadopoulou/christina/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/papadopoulou/christina/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/papadopoulou/christina/Node.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +27,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1Ri9Mvvt5R1pKLPDjnFNzLJAI4I" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -58,5 +73,18 @@
       <updated>1570139004254</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
